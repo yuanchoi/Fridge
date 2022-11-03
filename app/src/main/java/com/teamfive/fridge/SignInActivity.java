@@ -57,6 +57,10 @@ public class SignInActivity extends AppCompatActivity {
         String email = ((EditText)findViewById(R.id.emailEditText)).getText().toString();
         String password = ((EditText)findViewById(R.id.passwordEditText)).getText().toString();
 
+        String nickname = ((EditText)findViewById(R.id.nicknameEditText)).getText().toString();
+
+
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
