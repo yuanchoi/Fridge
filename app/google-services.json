@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1049451171993",
+    "project_id": "fridge-cf347",
+    "storage_bucket": "fridge-cf347.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049451171993:android:017641e92aea944ce2e808",
+        "android_client_info": {
+          "package_name": "com.teamfive.fridge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049451171993-g7must7d31i2pej3q1gi3n3bau0jnfit.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teamfive.fridge",
+            "certificate_hash": "61da9a8b7c53f24d5a3882685807179384b444bf"
+          }
+        },
+        {
+          "client_id": "1049451171993-mgffe69o7bo298o76d6v1l8gmmpgcfjs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvBs4ihQTpB5cgf25MofdQznuRoEHcgD8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049451171993-mgffe69o7bo298o76d6v1l8gmmpgcfjs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
