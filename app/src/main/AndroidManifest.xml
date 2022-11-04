@@ -33,6 +33,7 @@
                     android:host="google.com" />
             </intent-filter>
         </activity>
+        <activity android:name=".SignUpActivity"/>
 
         <activity android:name=".CookActivity"/>
     </application>
