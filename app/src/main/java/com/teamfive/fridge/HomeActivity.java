@@ -26,11 +26,23 @@ public class HomeActivity extends AppCompatActivity {
 
         ImageView cook = (ImageView) findViewById(R.id.cook);
         cook.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), CookActivity.class);
                 startActivity(intent);
             }
         });
+
+        ImageView add = (ImageView) findViewById(R.id.fridge);
+        add.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent_add = new Intent(getApplicationContext(), AddActivity.class);
+                startActivity(intent_add);
+            }
+        });
+
     }
 }
