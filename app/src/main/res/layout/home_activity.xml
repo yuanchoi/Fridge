@@ -38,8 +38,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="510dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="510dp">
 
         <ImageView
             android:id="@+id/cook"

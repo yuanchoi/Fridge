@@ -7,12 +7,15 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
+
 
         ImageView person = (ImageView) findViewById(R.id.person);
         person.setOnClickListener(new View.OnClickListener() {
@@ -44,5 +47,13 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        if(FirebaseAuth.getInstance().getCurrentUser() == null){
+            startSignUpActivity();
+        }
+
+    }
+    private void startSignUpActivity() {
+        Intent intent = new Intent(this, SignUpActivity.class);
+        startActivity(intent);
     }
 }
