@@ -51,6 +51,17 @@ public class HomeActivity extends AppCompatActivity {
             startSignUpActivity();
         }
 
+        ImageView calendar = (ImageView) findViewById(R.id.calendar);
+        calendar.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), CalendarActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
     private void startSignUpActivity() {
         Intent intent = new Intent(this, SignUpActivity.class);
