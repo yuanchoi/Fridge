@@ -17,6 +17,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.home_activity);
 
 
+
         ImageView person = (ImageView) findViewById(R.id.person);
         person.setOnClickListener(new View.OnClickListener() {
 
@@ -47,9 +48,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        if(FirebaseAuth.getInstance().getCurrentUser() == null){
-            startSignUpActivity();
-        }
 
         ImageView calendar = (ImageView) findViewById(R.id.calendar);
         calendar.setOnClickListener(new View.OnClickListener() {
@@ -61,8 +59,26 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        if(FirebaseAuth.getInstance().getCurrentUser() == null){
+            startSignUpActivity();
+        }
 
+        findViewById(R.id.logoutButton).setOnClickListener(onClickListener);
     }
+
+    View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v){
+            switch (v.getId()) {
+                case R.id.logoutButton:
+                    FirebaseAuth.getInstance().signOut();
+                    startSignUpActivity();
+                    break;
+            }
+        }
+    };
+
+
     private void startSignUpActivity() {
         Intent intent = new Intent(this, SignUpActivity.class);
         startActivity(intent);

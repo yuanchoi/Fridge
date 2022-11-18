@@ -80,6 +80,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void startHomeActivity(){
         Intent intent = new Intent(this, HomeActivity.class);
+        intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 }
