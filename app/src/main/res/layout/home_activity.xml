@@ -22,7 +22,6 @@
             android:src="@drawable/person"
             tools:ignore="MissingConstraints" />
 
-
         <Button
             android:id="@+id/logoutButton"
             android:layout_width="match_parent"
