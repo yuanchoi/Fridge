@@ -1,13 +1,23 @@
 package com.teamfive.fridge;
 
-public class RecipeList {
+import java.io.Serializable;
+
+public class RecipeList implements Serializable {
 
     //변수 선언
     String recipe_name, recipe_ingre, recipe_contents, menu_img;
 
 
-    public RecipeList(){}
-
+    public RecipeList(){
+        super();
+    }
+    //이거는 그룹을 생성할때 사용하는 부분
+    public RecipeList(String recipe_name, String recipe_ingre, String recipe_contents, String menu_img) {
+        this.recipe_name = recipe_name;
+        this.menu_img = menu_img;
+        this.recipe_ingre = recipe_ingre;
+        this.recipe_contents = recipe_contents;
+    }
 
     //여기서부터 get,set 함수를 사용하는데 이부분을 통해 값을 가져옴
     public String getRecipe_name() {
@@ -44,15 +54,15 @@ public class RecipeList {
         this.menu_img = menu_img;
     }
 
-
-    //이거는 그룹을 생성할때 사용하는 부분
-    public RecipeList(String recipe_name, String recipe_ingre, String recipe_contents, String menu_img) {
-        this.recipe_name = recipe_name;
-        this.recipe_ingre = recipe_ingre;
-        this.recipe_contents = recipe_contents;
-        this.menu_img = menu_img;
+    @Override
+    public String toString(){
+        return "RecipeList{" +
+                "recipe_name='" + recipe_name + '\'' +
+                ", menu_img='" + menu_img + '\'' +
+                ", recipe_ingre='" + recipe_ingre + '\'' +
+                ", recipe_contents='" + recipe_contents + '\'' +
+                '}';
     }
-
 
 
 }

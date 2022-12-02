@@ -81,7 +81,7 @@ public class SignUpActivity extends AppCompatActivity {
                 startToast("비밀번호가 일치하지 않습니다.");
             }
         }else{
-            startToast("이메일 또는 비밀번호를 입력해주세요ㅛ");
+            startToast("이메일 또는 비밀번호를 입력해주세요");
         }
     }
     private void startToast(String msg){

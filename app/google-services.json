@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "1049451171993",
+    "firebase_url": "https://fridge-cf347-default-rtdb.firebaseio.com",
     "project_id": "fridge-cf347",
     "storage_bucket": "fridge-cf347.appspot.com"
   },

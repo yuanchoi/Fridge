@@ -18,7 +18,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class CookActivity extends AppCompatActivity  {
+public class SoupActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ArrayList<RecipeList> recipeListArrayList;
@@ -44,7 +44,7 @@ public class CookActivity extends AppCompatActivity  {
         db = FirebaseFirestore.getInstance();
 
         recipeListArrayList = new ArrayList<RecipeList>();
-        recipeListAdapater = new RecipeListAdapater(CookActivity.this, recipeListArrayList);
+        recipeListAdapater = new RecipeListAdapater(SoupActivity.this, recipeListArrayList);
 
 
         recyclerView.setItemAnimator(null);
@@ -56,7 +56,7 @@ public class CookActivity extends AppCompatActivity  {
     }
 
     private void EventChangeListner() {
-        db.collection("recipe_56")
+        db.collection("financeData")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

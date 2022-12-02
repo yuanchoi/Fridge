@@ -11,29 +11,20 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
 
 
-
-        ImageView person = (ImageView) findViewById(R.id.person);
-        person.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
-                startActivity(intent);
-            }
-        });
-
         ImageView cook = (ImageView) findViewById(R.id.cook);
         cook.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), CookActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ChooseRecipe.class);
                 startActivity(intent);
             }
         });
@@ -49,6 +40,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
+
         ImageView calendar = (ImageView) findViewById(R.id.calendar);
         calendar.setOnClickListener(new View.OnClickListener() {
 
@@ -59,18 +51,15 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        if(FirebaseAuth.getInstance().getCurrentUser() == null){
-            startSignUpActivity();
-        }
 
-        findViewById(R.id.logoutButton).setOnClickListener(onClickListener);
+        findViewById(R.id.logout).setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v){
             switch (v.getId()) {
-                case R.id.logoutButton:
+                case R.id.logout:
                     FirebaseAuth.getInstance().signOut();
                     startSignUpActivity();
                     break;
