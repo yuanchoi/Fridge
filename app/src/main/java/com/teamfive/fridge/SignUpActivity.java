@@ -12,7 +12,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpActivity extends AppCompatActivity {
-    private static final String TAG = "SignUpActivity";
     private FirebaseAuth mAuth;
 
     @Override
@@ -28,13 +27,6 @@ public class SignUpActivity extends AppCompatActivity {
         findViewById(R.id.gotoLoginButton).setOnClickListener(onClickListener);
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-
-    }
 
     @Override public void onBackPressed(){
         super.onBackPressed();
@@ -52,7 +44,7 @@ public class SignUpActivity extends AppCompatActivity {
                     break;
 
                 case R.id.gotoLoginButton:
-                    startLoginActivity();
+                    mystartActivity(LoginActivity.class);
                     break;
             }
         }
@@ -70,6 +62,7 @@ public class SignUpActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 startToast("회원가입을 성공했습니다.");
+                                mystartActivity(HomeActivity.class);
                                 //성공UI
                             } else {
                                 if (task.getException() != null) {
@@ -85,11 +78,11 @@ public class SignUpActivity extends AppCompatActivity {
         }
     }
     private void startToast(String msg){
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();}
 
-    }
-    private void startLoginActivity(){
-        Intent intent = new Intent(this, LoginActivity.class);
+    private void mystartActivity(Class c){
+        Intent intent = new Intent(this, c);
+        intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 }

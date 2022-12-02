@@ -51,6 +51,16 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        ImageView community = (ImageView) findViewById(R.id.community);
+        community.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), CommunityActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         findViewById(R.id.logout).setOnClickListener(onClickListener);
     }
