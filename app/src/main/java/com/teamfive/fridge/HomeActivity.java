@@ -51,6 +51,18 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+
+        ImageView key = (ImageView) findViewById(R.id.fridge_code);
+        key.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), KeyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         ImageView community = (ImageView) findViewById(R.id.community);
         community.setOnClickListener(new View.OnClickListener() {
 

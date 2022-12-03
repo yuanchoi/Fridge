@@ -48,6 +48,7 @@
         <activity android:name=".RecipeListAdapater"/>
         <activity android:name=".SoupActivity"/>
         <activity android:name=".ChooseRecipe"/>
+        <activity android:name=".KeyActivity"/>
 
     </application>
 
