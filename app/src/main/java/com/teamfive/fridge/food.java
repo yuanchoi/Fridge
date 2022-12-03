@@ -10,7 +10,6 @@ public class food {
 
     public food(){} // 생성자 메서드
 
-
     //getter, setter 설정
     public String getname() {
         return name;
@@ -31,4 +30,5 @@ public class food {
         this.name = name;
         this.date = date;
     }
+
 }
